@@ -1,7 +1,5 @@
 package ru.zaurtregulov.javabeginning.lesson16.homework;
 
-import java.util.Arrays;
-
 public class Email {
 
     static void emailOne(String str) {
@@ -20,7 +18,7 @@ public class Email {
         int length = s.length();
         int dogIndex = 0;
         int semiIndex = 0;
-        int dotIndex = 0;
+        int dotIndex;
 
         while (semiIndex < length - 1) {
             dogIndex = s.indexOf('@', dogIndex + 1);
@@ -34,46 +32,40 @@ public class Email {
     }
 
     public static void emailSplit(String s) {
+        System.out.println("*********************************");
         String[] emails = s.split(";\\s*");
-        for (String email : emails) {
-            if (!email.contains("@") || !email.contains("."))
+//        System.out.println(Arrays.toString(emails));
+        for (String e : emails) {
+            if (e.isEmpty())
                 continue;
-            if (email.isEmpty())
-                continue;
-            String domain = email.split("@")[1].split("\\.")[0];
+//            if (e.contains("@") || e.contains("."))
+//                continue;
+            String domain = e.split("@")[1].split("\\.")[0];
             System.out.println(domain);
         }
+            System.out.println("*********************************");
+    }
 
+    public static void fruit(String s) {
+        System.out.println("*********************************");
+        String[] fruit = s.split(",\\s*");
+        for (String f : fruit) {
+            if (f.isEmpty())
+                continue;
+            String result = f.split(",")[0];
+            System.out.println(result);
+        }
+        System.out.println("*********************************");
     }
 
     static void main() {
 
 //        emailTwo("ya@yahoo.com; ona@mail.co.uk; ona@gmail.com;");
-
         emailSplit("ya@yahoo.com; ona@mail.co.uk; ona@gmail.com;");
 
-        String fruits = "ApplePearBanana";
-
-        System.out.println(fruits);
-
-        String[] arrFruits = fruits.split(":");
-        System.out.println(Arrays.toString(arrFruits));
-
-
-//        for (String fruit : arrFruits) {
-//            if (fruit.isEmpty())
-//                continue;
-//            String listFruits;
-//            listFruits = fruit.split(";"[1].split());
-//        }
-
-
-
+        fruit("Apple, Pear, Banana");
     }
-
 }
-
-
 
 
 
