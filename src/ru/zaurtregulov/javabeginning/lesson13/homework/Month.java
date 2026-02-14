@@ -48,5 +48,6 @@ class Month {
     static void main() {
         numberOfDaysOfTheMonth(5);
         Month.numberOfDaysOfTheMonth(9);
+
     }
 }

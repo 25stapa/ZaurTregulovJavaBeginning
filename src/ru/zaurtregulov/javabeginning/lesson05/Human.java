@@ -13,23 +13,26 @@ public class Human {
 }
 
 class Car3 {
+    String color;
+    String engine;
+
     Car3(String color, String engine) {
         this.color = color;
         this.engine = engine;
     }
 
-    String color;
-    String engine;
 }
 
 class BankAccount {
+
+    int id;
+    double balance;
+
     BankAccount(int id, double balance) {
         this.id = id;
         this.balance = balance;
     }
 
-    int id;
-    double balance;
 }
 
 class HumanTest {

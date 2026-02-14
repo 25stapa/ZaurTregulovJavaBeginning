@@ -7,7 +7,8 @@ public class StringMethods {
         String stringOne = new String("abcdefgabcd");
 
         int a = stringOne.length();
-        System.out.println("Number of characters in a word " + stringOne + " is " + a);
+        System.out.println("Number of characters in a word " +
+                stringOne + " is " + a);
         //  ---------------------------------------------------------------------------
         //  charAt(int index) -> char
         char ch1 = stringOne.charAt(3);
@@ -61,8 +62,22 @@ public class StringMethods {
         //  trim() -> String
         String stringFour = stringOne.trim();
         System.out.println(stringFour);     // Output -> abcdefgabcd(Убирает пробелы с края)
-                                            //  в середине пробелы не убираются
+        //  в середине пробелы не убираются
+        //  ---------------------------------------------------------------------------
 
+        // replace(char oldChar, char newChar) -> String
+        // replace(String oldString, String newString) -> String
 
+        String stringSix = stringOne.replace('e', 'E');
+        System.out.println(stringSix);      // Output -> abcdEfgabcd
+
+        String stringSeven = stringOne.replace("fgabcd", "_Today");
+        System.out.println(stringSeven);    // Output -> abcde_Today
+        //  ---------------------------------------------------------------------------
+
+        // concat(String str) -> String
+        String stringEight = stringOne.concat(stringSeven);
+        System.out.println(stringEight);    // Output -> abcdefgabcdabcde_Today
     }
+
 }
