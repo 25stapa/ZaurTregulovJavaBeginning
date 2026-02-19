@@ -19,7 +19,7 @@ public class Array {
 
 //        Initialization
         array2[0] = "privet";
-        array2[1] = "poka";
+        array2[1] = "goodbye";
         array2[2] = "ok";
         array4[0][0] = 4.5;
         array4[0][1] = 6.7;
